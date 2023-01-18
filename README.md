@@ -43,3 +43,15 @@ Finish time: 1800
 Actual time needed to complete: ~3hrs
 
 ![Whiteboard](img/WRRC-Whiteboard-Screenshot.jpg)
+
+Name of feature: Weather and Movies APIs
+
+Estimate of time needed to complete: 3 hours
+
+Start time: 1330
+
+Finish time: 1530
+
+Actual time needed to complete: 2hrs
+
+![Whiteboard](img/WhiteboardLab08.png)
