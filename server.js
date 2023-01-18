@@ -7,7 +7,7 @@ const cors = require('cors');
 
 // *** DONT FORGET TO REQUIRE STARTER JSON FILE ***
 
-let data = require('.data/pets.json');
+let data = require('./data/weather.json');
 
 
 
@@ -26,35 +26,21 @@ const PORT = process.env.PORT || 3002;
 
 
 // **** ENDPOINTS ****
-
-// *** Base endpoint - proof of life ***
-// ** 1st argument - endpoint  in quotes
+// ** 1st argument - endpoint in quotes
 // ** 2nd argument - callback which will execute when someone hits that point
-
 // ** Callback function - 2 parameters: request, response (rec, res)
-app.get('/', (request, response) => {
-  response.status(200).send('Welcome to my server');
-});
 
-
-app.get('/hello', (request, response) => {
-  console.log(request.query);
-
-  let firstName = request.query.firstName;
-  let lastName = request.query.lastName;
-
-  response.status(200).send(`Hello ${firstName} ${lastName}! Welcome to my server!`);
-});
-
-
-app.get('/pet', (request, response, next) => {
+app.get('/weather', (request, response, next) => {
   try {
-    let species = request.query.species;
+    // let lat = request.query.lat;
+    // let lon = request.query.lon;
+    let searchQuery = request.query.searchQuery;
 
-    let dataToGroom = data.find(pet => pet.species === species);
-    let dataToSend = new Pet(dataToGroom);
+    let dataToGroom = data.find(city => searchQuery.toLowerCase() === city.city_name.toLowerCase());
+    let arrayOfDays = dataToGroom.data;
+    let newDayArray = arrayOfDays.map(day => new Forcast(day));
 
-    response.status(200).send(dataToSend);
+    response.status(200).send(newDayArray);
 
   } catch (error) {
     next(error);
@@ -63,13 +49,12 @@ app.get('/pet', (request, response, next) => {
 
 // *** Class to groom bulky data ***
 
-class Pet {
-  constructor(petObj) {
-    this.name = petObj.name;
-    this.breed = petObj.breed;
+class Forcast {
+  constructor(cityObj) {
+    this.date = cityObj.valid_date;
+    this.description = cityObj.weather.description;
   }
 }
-
 
 // **** CATCH ALL ENDPOINT - NEEDS TO BE LAST DEFINED ENDPOINT ****
 
