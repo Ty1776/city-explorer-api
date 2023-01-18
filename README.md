@@ -32,14 +32,14 @@ TAs, Audrey Patterson (instructor)
 
 ---------------------------------------------------------------
 
-Name of feature: 
+Name of feature: Backend setup
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 3 hours
 
 Start time: 1450
 
-Finish time: 
+Finish time: 1800
 
-Actual time needed to complete: 
+Actual time needed to complete: ~3hrs
 
 ![Whiteboard](img/WRRC-Whiteboard-Screenshot.jpg)
