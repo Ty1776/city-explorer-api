@@ -6,13 +6,11 @@ const cors = require('cors');
 const getWeather = require('./modules/weather.js');
 const getMovies = require('./modules/movies');
 
-// const weather = require('./modules/weather.js');
 const app = express();
 
 app.use(cors());
 
 const PORT = process.env.PORT || 3002;
-// app.get('/weather', weatherHandler);
 app.get('/weather', getWeather);
 app.get('/movies', getMovies);
 
