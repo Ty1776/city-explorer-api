@@ -67,3 +67,13 @@ Finish time: 1430
 Actual time needed to complete: 1hrs
 
 ![Whiteboard](img/WRRC%20Screenshot%20Lab%209.jpg)
+
+Name of feature: Caching
+
+Estimate of time needed to complete: 2hrs
+
+Start time: 1300
+
+Finish time: 
+
+Actual time needed to complete: 
