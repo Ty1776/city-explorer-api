@@ -74,6 +74,8 @@ Estimate of time needed to complete: 2hrs
 
 Start time: 1300
 
-Finish time: 
+Finish time: 1500
 
-Actual time needed to complete: 
+Actual time needed to complete: 2hrs
+
+![Whiteboard](img/WhiteboardLab10.png)
